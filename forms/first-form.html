@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Form</title>
+</head>
+<style>
+    body{
+        text-align:center;
+    }
+
+    form{
+        display:inline-block;
+        /* Form outline */
+        padding: 1em;
+        border: 1px solid #ccc;
+        border-radius: 1em;
+        text-align: left;
+    }
+
+    ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    form li + li{
+        margin-top: 1em;
+    }
+
+    label{
+        /* Uniform size & alignment*/
+        display: inline-block;
+        min-width: 90px;
+        text-align: right;
+    }
+
+    input,
+    textarea {
+        /* To make sure that all text fields have the same font settings
+            By default, textareas have a monospace font */
+            font: 1em sans-serif;
+
+            width: 300px;
+            box-sizing: border-box;
+            border: 1px solid #999;
+    }
+
+    input:focus,
+    textarea:focus {
+
+        border-color: #000;
+    }
+
+    textarea {
+        vertical-align: top;
+        height: 5em;
+    }
+
+    .button {
+        padding-left: 90px;
+
+    }
+
+    button{
+        margin-left: 0.5em;
+    }
+
+</style>
+<body>
+    <form action="/my-handling-form-page" method="post">
+        <ul>
+            <li>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="user_name" placeholder="My Name" />
+            </li>
+            <li>
+                <label for="email">E-mail</label>
+                <input placeholder="email@world.com" type="email" id="mail" name="user_email" />
+            </li>
+            <li>
+                <label for="msg">Message:</label>
+                <textarea id="msg" name="user_message" placeholder="Write your message here"></textarea>
+            </li>
+            <li class="button">
+                <button type="submit">Send your message</button>
+            </li>
+    
+        </ul>
+       
+    </form>
+    
+</body>
+</html>
